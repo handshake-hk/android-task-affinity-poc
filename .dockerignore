@@ -1,0 +1,23 @@
+# Build Artifacts
+**/build/
+.gradle/
+Captures/
+
+# Android/Local Settings
+local.properties
+.navigation/
+assetpack/
+.bundle/
+
+# IDE Metadata
+.idea/
+*.iml
+.DS_Store
+
+# Version Control
+.git/
+.gitignore
+
+# Docker specific
+Dockerfile
+.dockerignore
