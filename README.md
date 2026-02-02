@@ -8,7 +8,7 @@ The generated APK will be available in your local `./output` directory after the
 
 ### Basic Usage (Default image, no logo)
 
-Set the targetapp environment variable to the package name of the app you wish to target.
+Set the `targetapp` environment variable to the package name of the app you wish to target.
 
 ```sh
 docker run --rm \
