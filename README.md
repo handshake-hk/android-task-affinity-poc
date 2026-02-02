@@ -1,15 +1,6 @@
 # Android Task Affinity PoC Generator
 
-This tool automates the generation of a Proof-of-Concept (PoC) Android application to demonstrate Task Affinity vulnerabilities (StrandHogg, Task Hijacking). It allows for rapid customization of the taskAffinity attribute and application branding via Docker.
-
-## Prerequisites
-
-- Docker installed.
-- The project image built locally:
-
-```
-docker build -t android-ta-poc .
-```
+This Docker image automates the generation of a Proof-of-Concept (PoC) Android application to demonstrate Task Affinity vulnerabilities (StrandHogg, Task Hijacking). It allows for rapid customization of the taskAffinity attribute and application branding via Docker.
 
 ## Usage
 
@@ -23,7 +14,7 @@ Set the targetapp environment variable to the package name of the app you wish t
 docker run --rm \
   -v $(pwd)/output:/data/output \
   -e targetapp="com.example.victimapp" \
-  android-ta-poc
+  ghcr.io/handshake-hk/android-task-affinity-poc
 ```
 
 ### Custom Logo Injection
@@ -35,7 +26,7 @@ docker run --rm \
   -v $(pwd)/output:/data/output \
   -v $(pwd)/my_custom_logo.png:/data/logo.png \
   -e targetapp="com.example.victimapp" \
-  android-ta-poc
+  ghcr.io/handshake-hk/android-task-affinity-poc
 ```
 
 ## Disclaimer
